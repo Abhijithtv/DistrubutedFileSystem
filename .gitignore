@@ -1,0 +1,68 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Maven and Gradle build directories
+/target/
+/build/
+
+# Logs
+*.log
+
+# Spring Boot specific
+*.pid
+*.h2.db
+*.db
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Java class files
+*.class
+
+# JAR, WAR, and EAR files
+*.jar
+*.war
+*.ear
+
+# Maven Wrapper
+.mvn/
+mvnw
+mvnw.cmd
+
+# Gradle Wrapper
+.gradle/
+gradle-wrapper.jar
+gradle-wrapper.properties
+gradlew
+gradlew.bat
+
+# Dependency directories
+/node_modules/
+/bower_components/
+
+# Application properties (optional, can be specific if you want to exclude sensitive data)
+# application.properties or application.yml (if they contain sensitive data)
+# You can choose to keep these files in the gitignore if you don't want them to be tracked
+# and use a configuration management tool like Vault, or use environment variables
+application.properties
+application.yml
+
+# Other common temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# OS-generated files (for macOS, Linux, etc.)
+# .AppleDouble, .LSOverride
+Icon?
+.DS_Store?
+._*
+
+# IntelliJ IDEA workspace files
+.idea/
+.vscode/
