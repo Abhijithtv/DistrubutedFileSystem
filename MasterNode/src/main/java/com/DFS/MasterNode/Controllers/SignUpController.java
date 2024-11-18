@@ -15,7 +15,7 @@ public class SignUpController {
         this.signupService = signupService;
     }
 
-    @PostMapping 
+    @PostMapping
     public ResponseEntity<?> AddClient(@RequestParam("id") String id, @RequestParam("password") String password){
         return signupService.Signup(id, password);
     }
