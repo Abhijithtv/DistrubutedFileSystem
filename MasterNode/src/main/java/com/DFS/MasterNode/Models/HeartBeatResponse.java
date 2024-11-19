@@ -4,5 +4,5 @@ import java.util.List;
 
 public class HeartBeatResponse {
     public Boolean isAlive;
-    public List<Chunk> chunkList;
+    public List<ChunkResponse> chunkResponseList;
 }

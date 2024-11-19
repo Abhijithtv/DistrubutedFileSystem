@@ -1,7 +1,6 @@
 package com.DFS.MasterNode.DBMock;
 
 import com.DFS.MasterNode.Helpers.Logger;
-import com.DFS.MasterNode.Models.ChunckServer;
 import com.DFS.MasterNode.Models.ChunkServer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;

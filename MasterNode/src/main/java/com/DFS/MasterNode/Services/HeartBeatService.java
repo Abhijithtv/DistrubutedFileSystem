@@ -1,8 +1,12 @@
 package com.DFS.MasterNode.Services;
 
+import com.DFS.MasterNode.Enums.HealthStatusEnum;
+import com.DFS.MasterNode.Helpers.HeartBeatHelper;
 import com.DFS.MasterNode.Models.ChunkServer;
 import com.DFS.MasterNode.Models.Client;
+import com.DFS.MasterNode.Models.HealthInfo;
 import com.DFS.MasterNode.Models.HeartBeatResponse;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -29,6 +33,8 @@ public class HeartBeatService {
         this.chunkServerService =  chunkServerService;
     }
 
+    @Value("chunk.replication-factor")
+    private int replicationFactor;
 
     public void SendHeartBeat(){
         HashMap<UUID, HeartBeatResponse> heartBeatMap = new HashMap<>();
@@ -37,12 +43,14 @@ public class HeartBeatService {
             heartBeatMap.put(server.Id, response);
         }
 
+         HealthInfo systemHealthInfo = HeartBeatHelper.analyse(heartBeatMap, replicationFactor);
+
         //TODO: using the heartBeatMap,
         //analyse chuck health
-        //if bad, dont send heartBeat
-        //prioritize replication
+        //even if bad, send heartBeat and update the state
+        //but prioritize replication
+        //prevent new replication, if its already in progress
         //get the system healthback
-        //update the chuck server meta data
     }
 
 

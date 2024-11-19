@@ -2,7 +2,7 @@ package com.DFS.MasterNode.Models;
 
 import java.util.UUID;
 
-public class Chunk {
+public class ChunkResponse {
     public UUID chunkId;
-    public UUID primaryChunkServer;
+    public boolean isPrimaryChunk;
 }
