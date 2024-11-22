@@ -31,4 +31,12 @@ public class ChunkHealth {
         this.chunkServerList.add(chunkServerId);
         return this;
     }
+
+    public boolean hasSufficientCopy(int minCopyCount){
+        return this.replications >= minCopyCount;
+    }
+
+    public int replicationShortage(int minCopyCount){
+        return Math.min(0, minCopyCount - replications);
+    }
 }
